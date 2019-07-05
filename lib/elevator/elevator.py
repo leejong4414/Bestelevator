@@ -1,8 +1,9 @@
-class Eelevator:
-    def __init__(self, floor_num, people_num, people_list, algo):
-        self.floor_num = floor_num
-        self.people_num = people_num
+class Elevator:
+    def __init__(self, max_floor, algo):
+        self.max_floor = max_floor
         self.algo = algo
-        self.people_list = people_list
+        self.clicked_floors = set()
+        self.current_floor = 1
 
-    def totalTime(self):
+    def person_click_floor(self, floor):
+        self.clicked_floors.add(floor)
